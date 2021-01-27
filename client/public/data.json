@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Шампунь",
+        "price": 200,
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "url": "/image_1.png",
+        "id": 1
+    },
+    {
+        "title": "Шампунь",
+        "price": 200,
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "url": "/image_2.png",
+        "id": 2
+    },
+    {
+        "title": "Шампунь",
+        "price": 200,
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "url": "/image_3.png",
+        "id": 3
+    }
+]
