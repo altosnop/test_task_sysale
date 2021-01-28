@@ -1,20 +1,28 @@
-import Card from './components/Card/Card';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import Card from "./components/Card/Card";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import "./App.css"
 
 function App() {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("/data.json")
-      .then(response => setData(response.data));
+    axios.get("/data.json").then((response) => setData(response.data));
   }, []);
 
   return (
-    data.map(item => (
-      <Card key={item.id} title={item.title} content={item.content} img={item.url} price={item.price}/>
-    ))
+    <div className="flex_div">
+      {data.map(item => (
+      <Card
+        key={item.id}
+        title={item.title}
+        content={item.content}
+        img={item.url}
+        price={item.price}
+        photo={item.img}
+      />
+      ))}
+    </div>
   );
 }
 

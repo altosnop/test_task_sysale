@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Card.css";
+import icon from "../../assets/icon.png";
+import onClickBtn from "../../functions/onClickBtm";
 
 function Card(props) {
-  const { title, content, img, price } = props;
+  const { title, content, img } = props;
   const [productAmount, setProductAmount] = useState(1);
 
   useEffect(() => {
@@ -18,9 +20,9 @@ function Card(props) {
         <h4 className="main_block-title">{title}</h4>
         <p className="main_block-content">{content}</p>
         <div className="second_block">
-          <div class="dropdown">
-            <span class="dropbtn">Цвет</span>
-            <div class="dropdown-content">
+          <div className="dropdown">
+            <span className="dropbtn">Цвет</span>
+            <div className="dropdown-content">
               <a href="#">Желтый</a>
               <a href="#">Красный</a>
               <a href="#">Зеленый</a>
@@ -28,20 +30,38 @@ function Card(props) {
           </div>
           <span className="second_block-price">{productAmount * 200} грн</span>
         </div>
-        <div className="third_block-radio">
-          <label for="100">
-            <input type="radio" id="100" name="color" value="100" checked />
-            100 мл
-          </label>
-          <label for="200">
-            <input type="radio" id="200" name="color" value="200" />
-            200 мл
-          </label>
-          <label for="300">
-            <input type="radio" id="300" name="color" value="300" />
-            300 мл
-          </label>
-        </div>
+        <form action="#" className="third_block-radio">
+          <div className="radio">
+            <input
+              className="custom-radio"
+              type="checkbox"
+              id="color-1"
+              value="indigo"
+              defaultChecked
+            />
+            <label htmlFor="color-1">100 мл</label>
+          </div>
+
+          <div className="radio">
+            <input
+              className="custom-radio"
+              type="checkbox"
+              id="color-2"
+              value="red"
+            />
+            <label htmlFor="color-2">200 мл</label>
+          </div>
+
+          <div className="radio">
+            <input
+              className="custom-radio"
+              type="checkbox"
+              id="color-3"
+              value="brown"
+            />
+            <label htmlFor="color-3">300 мл</label>
+          </div>
+        </form>
         <div className="fourth_block">
           <div className="counter">
             <button onClick={() => setProductAmount(productAmount - 1)}>
@@ -55,7 +75,9 @@ function Card(props) {
           <button className="buy_button">Купить</button>
         </div>
         <div className="new">New</div>
-        <div className="compare">0_0</div>
+        <div className="compare" onClick={onClickBtn}>
+          <img className="compare-img" src={icon}></img>
+        </div>
       </div>
     </>
   );
